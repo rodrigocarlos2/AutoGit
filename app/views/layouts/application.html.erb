@@ -25,8 +25,8 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <% if current_user %>
-          <li>Sign in as: <%= current_user.name %> - <%= image_tag("http://graph.facebook.com/#{current_user.uid}/picture?type=small", width: '40', height: '40', class: 'img-circle')%></li>
-          <li><%= link_to "Sign Out", 'sign_out', method: :delete %></li>
+          
+          <h4><%= link_to "Sign Out", 'sign_out', method: :delete %></h4>
         <% else %>
           <li><%= link_to "auth/facebook" do %><%= image_tag('facebook.png', width: '40', height: '40', class: 'img-circle')%><% end %></li>
           <li><%= link_to "auth/github" do %><%= image_tag('github.png', width: '40', height: '40', class: 'img-circle')%><% end %></li>
@@ -36,10 +36,12 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-
+<!--
 <% flash.each do |key, value| %>
   <div class="alert alert=info"><%= value %></div>
 <% end %>
+
+-->
 
 <% if current_user %>
   <div class="text-center">
